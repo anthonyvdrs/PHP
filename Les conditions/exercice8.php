@@ -1,5 +1,5 @@
 <?php
-$maVariable ;
+$maVariable = null;
 
 if ($maVariable){
     echo 'c\'est ok !!';

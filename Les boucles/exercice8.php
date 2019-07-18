@@ -5,4 +5,3 @@ while ($nbr > 0){
     $nbr = $nbr - 12;
 }
 ?>
-?>
