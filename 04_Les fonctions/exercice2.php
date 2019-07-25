@@ -1,4 +1,3 @@
-
 <?php
 function ex2($text) {
     return $text;
