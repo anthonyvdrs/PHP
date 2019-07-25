@@ -1,0 +1,21 @@
+<?php
+        $signe = $_POST['envoi'];
+        if ($_POST['nbr1'] == "" || $_POST['nbr2'] == "") {
+            echo "erreur";
+
+        } else if ($signe === '+') {
+            echo $_POST['nbr1'] +  $_POST['nbr2'];
+
+        } else if ($signe === "-") {
+            echo $_POST['nbr1'] - $_POST['nbr2'];
+
+        } else if ($signe === "/" && $_POST['nbr2'] != 0) {
+            echo $_POST['nbr1'] /  $_POST['nbr2'];
+
+        } else if ($signe === "/") {
+            echo "erreur";
+
+        } else  {
+            echo $_POST['nbr1'] * $_POST['nbr2'];
+        }
+    ?>
