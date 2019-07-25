@@ -1,29 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
+
+
     <?php
-     if (isset($_POST['login']) && isset($_POST['password'])) {
-        setcookie('login', $_POST['login'], time()+60*60*24*30);
-        setcookie('password', $_POST['password'], time()+60*60*24*30);
+    if (isset($_POST['Username']) && isset($_POST['password'])) {
+        setcookie('Username', $_POST['Username']);
+        setcookie('password', $_POST['password']);
     }
 
-    if (isset($_COOKIE['login']) && isset($_COOKIE['password'])) {
-        echo "Logged as " . $_COOKIE['login'];
+    if (isset($_COOKIE['Username']) && isset($_COOKIE['password'])) {
+        echo 'Connected';
     } else {
-        echo 
-        "<form action=\"index.php\" method=\"post\">
-            Login: <input type=\"text\" name=\"login\" id=\"login\">
-            Password: <input type=\"password\" name=\"password\" id=\"password\">
-            <input type=\"submit\" value=\"Valider\">
-        </form>"
+        
+        echo
+        '<form action="index.php" method="post">
+            Username: <input type="text" name="Username" id="Username">
+            Password: <input type="password" name="password" id="password">
+            <input type="submit" value="Submit">
+        </form>'
         ;
     }
-    ?>
+?>
+
 </body>
+
 </html>
